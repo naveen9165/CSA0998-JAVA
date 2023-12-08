@@ -26,14 +26,13 @@ public class Time {
         printTime("USA Time", indiaDate, "America/New_York");
         printTime("Queensland Time", indiaDate, "Australia/Sydney");
         printTime("London Time", indiaDate, "Europe/London");
-System.out.println("Current date,day,Time");
+
         printCurrentTime("Asia/Kolkata", "India Time");
         printCurrentTime("America/New_York", "USA Time");
         printCurrentTime("Australia/Sydney", "Queensland Time");
         printCurrentTime("Europe/London", "London Time");
-
     }
-   
+
     private static void printTime(String label, Date date, String timeZoneId) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy EEE HH:mm:ss a");
         sdf.setTimeZone(TimeZone.getTimeZone(timeZoneId));
@@ -45,13 +44,13 @@ System.out.println("Current date,day,Time");
 
         String formattedTime = sdf.format(currentDate);
         System.out.println(label + ": " + formattedTime);
-       
     }
 
     private static void printCurrentTime(String timeZoneId, String timeZoneName) {
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMMM d, yyyy hh:mm:ss a");
         sdf.setTimeZone(TimeZone.getTimeZone(timeZoneId));
         String currentTime = sdf.format(new Date());
+
         System.out.println(timeZoneName + ": " + currentTime);
     }
 }
