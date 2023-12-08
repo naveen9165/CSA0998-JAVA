@@ -1,14 +1,30 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class Spl {
-    public static void main(String[] Args){
-        Scanner sc = new Scanner(System.in);
+class spl
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s1;
+        int len, sp_count=0,alp_count=0,digi_count=0,n_count=0;
+        System.out.print("Enter the text: ");
+        s1=sc.nextLine();
+        len=s1.length();
+        char[] ch=s1.toCharArray();
+        for(int i=0;i<len;i++){
+            if((ch[i]>='a' && ch[i]<='z') || (ch[i]>='A' && ch[i]<='Z')){
+                alp_count++;
+            }
+            else if(ch[i]>='0'&&ch[i]<='9') {
+                digi_count++;
+            }
+            else
 
-        System.out.println("Enter a Decimal Number : ");
-        float num = sc.nextFloat();
-
-        System.out.println("Square of " + num + " : " + num*num);
-        System.out.print("Cube of " + num + " : " );
-        System.out.format("%.3f",(num*num*num));
+            {
+                System.out.print(ch[i]);
+                sp_count++;
+            }
+        }
+        System.out.println();
+        System.out.println("total special character: "+sp_count);
     }
 }
