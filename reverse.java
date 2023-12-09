@@ -1,27 +1,16 @@
-import java.io.*;
 import java.util.*;
-public class reverse
-{
-    public static void main(String arg[])
-    {
-          try
-          {
-               Scanner sc=new Scanner(System.in);
-               int n,re=0,rem;
-               System.out.println("Enter a number:");
-               n=sc.nextInt();
-               while(n!=0)
-               {
-                  rem=n%10;
-                  re=re*10+rem;
-                  n=n/10;
-                }
-               
-               System.out.println("The reversed number is:"+re);
-            }
-           catch(Exception e)
-           {
-               System.out.println("Enter a valid number");
-           }
-      }
-}
+class reverse{
+    public static void main(String args[]){
+        Scanner S=new Scanner(System.in);
+        int num,rev=0,rem;
+        System.out.println("enter a number");
+        num=S.nextInt();
+        while(num!=0)
+        {
+            rem=num%10;
+            rev=rev*10+rem;
+            num=num/10;
+        }
+          System.out.println("reverse "+rev);
+          
+    }
