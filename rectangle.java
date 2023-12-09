@@ -1,28 +1,27 @@
-import java.util.Scanner;
-
-public class rectangle {
-	private static Scanner sc;
-	public static void main(String[] args) 
-	{
-		int rows, columns, i, j;
-		char ch;
-		sc = new Scanner(System.in);
-		System.out.print(" Please Enter any Character : ");
-        ch = sc.next().charAt(0);
-		
-		System.out.print(" Please Enter Number of Rows : ");
-		rows = sc.nextInt();	
-		
-		System.out.print(" Please Enter Number of Columns : ");
-		columns = sc.nextInt();		
-			
-		for(i = 1; i <= rows; i++)
-		{
-			for(j = 1; j <= columns; j++)
-			{
-				System.out.print(ch+" "); 
-			}
-			System.out.print("\n"); 
-		}	
-	}
+import java.util.*;
+class rectangle
+{
+    int height,width;
+    void area()
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter height");
+        height=s.nextInt();
+        System.out.println("enter width");
+        width=s.nextInt();
+    }
+    void cal()
+    {
+        int result=height*width;
+        System.out.println("area of rectangle is="+result);
+    }
+}
+class rect
+{
+    public static void main(String args[])
+    {
+        rectangle obj=new rectangle();
+        obj.area();
+        obj.cal();
+    }
 }
